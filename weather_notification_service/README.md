@@ -1,5 +1,3 @@
-Aqui está o README atualizado e melhorado para refletir as alterações e melhorias feitas na aplicação:
-
 ---
 
 # Weather Notification Service
