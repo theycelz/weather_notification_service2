@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Chart from './components/Chart';
+import DataList from './components/DataList';
+import SubscribeForm from './components/SubscribeForm';
+import UnsubscribeForm from './components/UnsubscribeForm';
+
+const App = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get('/api/weather-data');
+      setData(result.data);
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Weather Notification Service</h1>
+      <SubscribeForm />
+      <UnsubscribeForm />
+      <DataList data={data} />
+      <Chart data={data} />
     </div>
   );
-}
+};
 
 export default App;
