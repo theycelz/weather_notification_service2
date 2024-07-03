@@ -1,3 +1,5 @@
+Aqui está o README atualizado e melhorado para refletir as alterações e melhorias feitas na aplicação:
+
 ---
 
 # Weather Notification Service
@@ -35,7 +37,7 @@ O serviço integra-se com um serviço de dados externo para coletar dados meteor
 
    ```bash
    git clone https://github.com/theycelz/weather_notification_service2.git
-   cd weather_notification_service2
+   cd weather_notification_service
    ```
 
 2. **Construa e inicie os contêineres**:
@@ -98,3 +100,9 @@ weather_notification_app/
 - **Dockerfile**: Configuração do Docker para construir a imagem da aplicação.
 - **docker-compose.yml**: Configuração do Docker Compose para orquestrar os serviços da aplicação.
 - **nginx.conf**: Configuração do NGINX como API Gateway.
+
+## Licença
+
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
