@@ -1,8 +1,12 @@
 
 import React from 'react';
 import { Line } from 'react-chartjs-2';
+import PropTypes from 'prop-types';
 
 const Chart = ({ data }) => {
+  Chart.propTypes = {
+    data: PropTypes.array.isRequired,
+  };
   const chartData = {
     labels: data.map(entry => entry.date),
     datasets: [
